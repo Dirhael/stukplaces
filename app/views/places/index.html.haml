@@ -1,0 +1,20 @@
+%h1 Listing Places
+
+%table.table
+  %thead
+    %tr
+      %th Name
+      %th Address
+      %th Phone
+      %th Website
+  %tbody
+    - @places.each do |place|
+      %tr
+        %td= place.name
+        %td= place.address
+        %td= place.phone
+        %td= place.website
+
+%p
+  -if current_user
+    =link_to 'New Place', new_place_path

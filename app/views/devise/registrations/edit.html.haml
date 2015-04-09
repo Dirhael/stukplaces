@@ -12,6 +12,9 @@
     = f.input :current_password, hint: "we need your current password to confirm your changes", required: true
   .form-actions
     = f.button :submit, "Update"
+  %p
+  = gravatar_tag current_user.email, size: 100
+  = link_to 'Change Avatar', 'https://en.gravatar.com'
 %h3 Cancel my account
 %p
   Unhappy? #{link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
