@@ -5,6 +5,7 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+MAPS_KEY = ENV['MAPS_KEY']
 
 module Stukplaces
   class Application < Rails::Application
