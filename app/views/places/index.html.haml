@@ -10,7 +10,7 @@
   %tbody
     - @places.each do |place|
       %tr
-        %td= place.name
+        %td= link_to place.name, place
         %td= place.address
         %td= place.phone
         %td= place.website

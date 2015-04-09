@@ -14,11 +14,14 @@
       %strong Description
       = @place.description
 
+    %p
+      #map-canvas{:style => "width: 230px; height: 230px;"}
+
   .col-md-9
     %h3 Reviews by People
-
-
-#map-canvas{:style => "width: 230px; height: 230px;"}
+    = render 'reviews/form'
+    %h3 All Reviews
+    = render @reviews
 :javascript
   function initialize() {
     var mycenter = { lat: #{@place.latitude}, lng: #{@place.longitude}}
